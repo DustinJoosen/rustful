@@ -1,0 +1,15 @@
+[package]
+name = "syter6-rustful"
+description = "A simple web framework for routing requests"
+version = "0.1.1"
+authors = ["Dustin Joosen <dustinjoosen2003@gmail.com>"]
+edition = "2021"
+license = "MIT OR Apache-2.0"
+keywords = ["web", "http", "routing"]
+categories = ["web-programming"]
+
+[dependencies]
+colored = "3.0.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+serde_urlencoded = "0.7"
