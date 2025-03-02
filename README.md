@@ -1,6 +1,6 @@
 # Syter6-Rustful
 
-Syter6-Rustfule is a lightweight, minimalistic api framework for Rust, designed to provide basic request handling, routing, and response management. It offers just enough functionality to build simple web applications without unnecessary complexity.
+Syter6-Rustful is a lightweight, minimalistic api framework for Rust, designed to provide basic request handling, routing, and response management. It offers just enough functionality to build simple web applications without unnecessary complexity.
 
 ## Features
 - Define and register routes easily
@@ -15,7 +15,7 @@ Add this to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-syter6-rustful = "0.1.1"
+syter6-rustful = "0.1.2"
 ```
 
 ## Usage
@@ -32,7 +32,7 @@ impl HomeController {
         
         // Do something with a database
 
-		Response::ok(format!("{:?}", user_id).as_str())
+		Response::ok(format!("Hello {:?}", user_id).as_str())
 	}
 
 	pub fn tea(_: Request) -> Response {
@@ -50,7 +50,7 @@ pub fn get_routes() -> Vec<Route> {
 	vec![
 		Route {
 			uri: String::from("/user/{user_id}"),
-			method: HttpMethod::POST,
+			method: HttpMethod::GET,
 			action: HomeController::find_user
 		},
 		Route {
